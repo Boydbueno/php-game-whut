@@ -1,6 +1,4 @@
-<?php
-
-namespace MoveBehaviors;
+<?php namespace Behaviors\Move;
 
 class Walk
 {

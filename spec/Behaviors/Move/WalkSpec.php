@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\MoveBehaviors;
+namespace spec\Behaviors\Move;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -9,7 +9,7 @@ class WalkSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('MoveBehaviors\Walk');
+        $this->shouldHaveType('Behaviors\Move\Walk');
     }
 
     function it_should_walk_when_moving()

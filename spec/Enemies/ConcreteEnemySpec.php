@@ -6,16 +6,16 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use Weapons\Interfaces\Wieldable;
-use MoveBehaviors\MoveBehavior;
+use Behaviors\Move\MoveInterface;
 
 class ConcreteEnemySpec extends ObjectBehavior
 {
-	function let(Wieldable $weapon, MoveBehavior $moveBehavior)
+	function let(Wieldable $weapon, MoveInterface $moveInterface)
 	{
 		$weapon->fire()->willReturn("Shooting");
-		$moveBehavior->move()->willReturn("Moving");
+		$moveInterface->move()->willReturn("Moving");
 
-		$this->beConstructedWith($weapon, $moveBehavior);
+		$this->beConstructedWith($weapon, $moveInterface);
 	}
 
     function it_should_be_an_enemy()
@@ -49,10 +49,10 @@ class ConcreteEnemySpec extends ObjectBehavior
         $this->shoot()->shouldEqual("Firing other weapon");
     }
 
-    function it_can_swap_movement_behavior(MoveBehavior $moveBehavior)
+    function it_can_swap_movement_behavior(MoveInterface $moveInterface)
     {
-        $moveBehavior->move()->willReturn("Some other movement behavior");
-        $this->setMoveBehavior($moveBehavior);
+        $moveInterface->move()->willReturn("Some other movement behavior");
+        $this->setMoveInterface($moveInterface);
 
         $this->move()->shouldEqual("Some other movement behavior");
     }

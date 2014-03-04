@@ -2,21 +2,22 @@
 
 use Weapons\Interfaces\Wieldable;
 
-use MoveBehaviors\MoveBehavior;
+use Behaviors\Move\MoveInterface;
 use Shootable;
 use Moveable;
 
 abstract class EnemyAbstract implements Shootable, Moveable
 {
 
-	protected $hp;
+    protected $maxHp;
+	protected $currentHp;
     protected $weapon;
-    protected $moveBehavior;
+    protected $moveInterface;
 
-    public function __construct(Wieldable $weapon, MoveBehavior $moveBehavior)
+    public function __construct(Wieldable $weapon, MoveInterface $moveInterface)
     {
         $this->weapon = $weapon;
-        $this->moveBehavior = $moveBehavior;
+        $this->moveInterface = $moveInterface;
     }
 
     public function shoot()
@@ -26,17 +27,22 @@ abstract class EnemyAbstract implements Shootable, Moveable
 
     public function move()
     {
-        return $this->moveBehavior->move();
+        return $this->moveInterface->move();
     }
 
     public function getHp()
     {
-        return $this->hp;
+        return $this->currentHp;
     }
 
     public function setHp($value)
     {
-        $this->hp = $value;
+        $this->currentHp = $value;
+    }
+
+    public function getMaxHp()
+    {
+        return $this->maxHp;
     }
 
     public function setWeapon(Wieldable $weapon)
@@ -44,8 +50,8 @@ abstract class EnemyAbstract implements Shootable, Moveable
         $this->weapon = $weapon;
     }
 
-    public function setMoveBehavior(MoveBehavior $moveBehavior)
+    public function setMoveInterface(MoveInterface $moveInterface)
     {
-        $this->moveBehavior = $moveBehavior;
+        $this->moveInterface = $moveInterface;
     }
 }

@@ -20,7 +20,7 @@ class SwordSpec extends ObjectBehavior
     	$this->fire()->shouldEqual("Slashing with sword");
     }
 
-    function it_has_a_damage_number()
+    function it_has_a_damage_number_of_10()
     {
         $this->getDamage()->shouldEqual(10);
     }

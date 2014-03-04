@@ -20,7 +20,7 @@ class AxeSpec extends ObjectBehavior
     	$this->fire()->shouldEqual('Chopping with axe');
     }
 
-    function it_has_a_damage_number()
+    function it_has_a_damage_number_of_14()
     {
     	$this->getDamage()->shouldEqual(14);
     }
