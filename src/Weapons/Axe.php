@@ -8,9 +8,4 @@ class Axe extends Weapon
 	{
 		return "Chopping with axe";
 	}
-
-	public function getDamage()
-	{
-		return $this->damage;
-	}
 }

@@ -1,7 +1,6 @@
 <?php namespace Enemies;
 
-use Weapons\WeaponInterface;
-use Weapons\WeaponBehavior;
+use Weapons\Interfaces\Wieldable;
 
 use MoveBehaviors\MoveBehavior;
 use Shootable;
@@ -14,7 +13,7 @@ abstract class EnemyAbstract implements Shootable, Moveable
     protected $weapon;
     protected $moveBehavior;
 
-    public function __construct(WeaponInterface $weapon, MoveBehavior $moveBehavior)
+    public function __construct(Wieldable $weapon, MoveBehavior $moveBehavior)
     {
         $this->weapon = $weapon;
         $this->moveBehavior = $moveBehavior;
@@ -40,7 +39,7 @@ abstract class EnemyAbstract implements Shootable, Moveable
         $this->hp = $value;
     }
 
-    public function setWeapon(WeaponInterface $weapon)
+    public function setWeapon(Wieldable $weapon)
     {
         $this->weapon = $weapon;
     }

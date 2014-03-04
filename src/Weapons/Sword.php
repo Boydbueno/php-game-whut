@@ -9,9 +9,4 @@ class Sword extends Weapon
         return "Slashing with sword";
     }
 
-    public function getDamage()
-    {
-        return $this->damage;
-    }
-
 }

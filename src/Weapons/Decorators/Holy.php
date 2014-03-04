@@ -3,8 +3,4 @@
 class Holy extends WeaponDecorator
 {
 	protected $bonusDamage = 4;
-
-	public function fire(){
-
-	}
 }

@@ -11,7 +11,8 @@ class AxeSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Weapons\Axe');
         $this->shouldBeAnInstanceOf('Weapons\Weapon');
-        $this->shouldImplement('Weapons\WeaponInterface');
+        $this->shouldImplement('Weapons\Interfaces\Wieldable');
+        $this->shouldImplement('Weapons\Interfaces\DamageDealable');
     }
 
     function it_can_chop()

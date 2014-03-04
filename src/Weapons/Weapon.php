@@ -1,9 +1,17 @@
 <?php namespace Weapons;
 
-abstract class Weapon implements WeaponInterface
+use Weapons\Interfaces\Wieldable;
+use Weapons\Interfaces\DamageDealable;
+
+abstract class Weapon implements Wieldable, DamageDealable
 {
     protected $damage;
 
-    public abstract function getDamage();
+    public function getDamage() {
+    	return $this->damage;
+    }
 
+    public function fire() {
+    	return "Fire the weapon, swing it or whatever";
+    }
 }

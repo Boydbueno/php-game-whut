@@ -5,12 +5,12 @@ namespace spec\Enemies;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Weapons\WeaponInterface;
+use Weapons\Interfaces\Wieldable;
 use MoveBehaviors\MoveBehavior;
 
 class ConcreteEnemySpec extends ObjectBehavior
 {
-	function let(WeaponInterface $weapon, MoveBehavior $moveBehavior)
+	function let(Wieldable $weapon, MoveBehavior $moveBehavior)
 	{
 		$weapon->fire()->willReturn("Shooting");
 		$moveBehavior->move()->willReturn("Moving");
@@ -41,7 +41,7 @@ class ConcreteEnemySpec extends ObjectBehavior
         $this->getHp()->shouldEqual(20);
     }
 
-    function it_can_swap_weapon(WeaponInterface $weapon)
+    function it_can_swap_weapon(Wieldable $weapon)
     {
         $weapon->fire()->willReturn("Firing other weapon");
         $this->setWeapon($weapon);

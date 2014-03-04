@@ -1,11 +1,11 @@
 <?php namespace Weapons\Decorators;
 
 use Weapons\Weapon;
+use Weapons\Interfaces\DamageDealable;
 
-abstract class WeaponDecorator extends Weapon {
+abstract class WeaponDecorator implements DamageDealable {
 
 	protected $weapon;
-	
 	protected $bonusDamage;
 
 	public function __construct(Weapon $weapon)
