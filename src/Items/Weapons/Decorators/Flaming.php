@@ -1,4 +1,4 @@
-<?php namespace Weapons\Decorators;
+<?php namespace Items\Weapons\Decorators;
 
 class Flaming extends WeaponDecorator
 {

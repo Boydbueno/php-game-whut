@@ -1,6 +1,6 @@
 <?php namespace Enemies;
 
-use Weapons\Interfaces\Wieldable;
+use Items\Weapons\Interfaces\Wieldable;
 
 use Behaviors\Move\MoveInterface;
 use Shootable;

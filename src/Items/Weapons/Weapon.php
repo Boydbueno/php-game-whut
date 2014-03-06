@@ -1,4 +1,4 @@
-<?php namespace Weapons;
+<?php namespace Items\Weapons;
 
 use Weapons\Interfaces\Wieldable;
 use Weapons\Interfaces\DamageDealable;

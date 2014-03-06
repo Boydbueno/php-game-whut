@@ -1,4 +1,4 @@
-<?php namespace Weapons;
+<?php namespace Items\Weapons;
 
 class Axe extends Weapon
 {

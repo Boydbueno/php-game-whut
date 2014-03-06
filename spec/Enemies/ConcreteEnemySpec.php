@@ -5,7 +5,7 @@ namespace spec\Enemies;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Weapons\Interfaces\Wieldable;
+use Items\Weapons\Interfaces\Wieldable;
 use Behaviors\Move\MoveInterface;
 
 class ConcreteEnemySpec extends ObjectBehavior
