@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Items\Weapons\Decorators;
+namespace spec\Items\Decorators;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -20,7 +20,7 @@ class FlamingSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Items\Weapons\Decorators\Flaming');
+        $this->shouldHaveType('Items\Decorators\Flaming');
     }
 
     function it_should_increase_the_damage_of_the_weapon()
