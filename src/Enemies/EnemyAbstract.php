@@ -13,6 +13,7 @@ abstract class EnemyAbstract implements Shootable, Moveable
 	protected $currentHp;
     protected $weapon;
     protected $moveInterface;
+    protected $stats;
 
     public function __construct(Wieldable $weapon, MoveInterface $moveInterface)
     {
@@ -43,6 +44,11 @@ abstract class EnemyAbstract implements Shootable, Moveable
     public function getMaxHp()
     {
         return $this->maxHp;
+    }
+
+    public function getDexterity()
+    {
+        return $this->stats['dexterity'];
     }
 
     public function setWeapon(Wieldable $weapon)

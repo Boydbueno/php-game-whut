@@ -30,4 +30,9 @@ class SkeletonArcherSpec extends ObjectBehavior
     	$this->getMaxHp()->shouldEqual(20);
     }
 
+    function it_should_have_15_dexterity()
+    {
+        $this->getDexterity()->shouldEqual(15);
+    }
+
 }

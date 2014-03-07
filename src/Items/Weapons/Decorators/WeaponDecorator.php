@@ -1,7 +1,7 @@
 <?php namespace Items\Weapons\Decorators;
 
 use Items\Weapons\Weapon;
-use Items\Weapons\Interfaces\DamageDealable;
+use Items\Interfaces\DamageDealable;
 
 abstract class WeaponDecorator implements DamageDealable {
 
