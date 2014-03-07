@@ -5,7 +5,7 @@ namespace spec\Enemies;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Items\Weapons\Interfaces\Wieldable;
+use Items\Interfaces\Wieldable;
 use Behaviors\Move\MoveInterface;
 
 class SkeletonArcherSpec extends ObjectBehavior

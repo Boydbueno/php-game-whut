@@ -1,4 +1,4 @@
-<?php namespace Items\Weapons\Interfaces;
+<?php namespace Items\Interfaces;
 
 interface DamageDealable {
 	function getDamage();
