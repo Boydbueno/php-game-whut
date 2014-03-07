@@ -8,6 +8,11 @@ abstract class Stat
     protected $acronym;
     protected $value;
 
+    public function __construct($startValue)
+    {
+        $this->value = $startValue;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -20,7 +25,7 @@ abstract class Stat
 
     public function get()
     {
-        return (int)$this->value;
+        return $this->value;
     }
 
     public function set($value)
