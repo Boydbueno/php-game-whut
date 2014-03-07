@@ -1,7 +1,7 @@
 <?php namespace Items\Weapons;
 
-use Weapons\Interfaces\Wieldable;
-use Weapons\Interfaces\DamageDealable;
+use Items\Interfaces\Wieldable;
+use Items\Interfaces\DamageDealable;
 
 abstract class Weapon implements Wieldable, DamageDealable
 {
