@@ -20,7 +20,7 @@ class ZombieSpec extends ObjectBehavior
     function it_should_be_an_enemy()
     {
         $this->shouldHaveType('Enemies\Zombie');
-        $this->shouldBeAnInstanceOf('Enemies\EnemyAbstract');
+        $this->shouldBeAnInstanceOf('Enemies\Enemy');
     }
 
     function it_should_have_a_max_hp_of_30()

@@ -15,7 +15,7 @@ abstract class WeaponDecorator implements DamageDealable {
 
 	public function getDamage()
 	{
-		return $this->bonusDamage + $this->weapon->getDamage();
+		return $this->getBonusDamage() + $this->weapon->getDamage();
 	}
 
 	public function getBonusDamage()

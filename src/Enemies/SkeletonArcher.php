@@ -1,6 +1,6 @@
 <?php namespace Enemies;
 
-class SkeletonArcher extends EnemyAbstract
+class SkeletonArcher extends Enemy
 {
 
 	protected $maxHp = 20;

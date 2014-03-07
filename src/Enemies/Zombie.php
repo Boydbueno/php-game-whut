@@ -2,7 +2,7 @@
 
 namespace Enemies;
 
-class Zombie extends EnemyAbstract
+class Zombie extends Enemy
 {
 
     protected $maxHp = 30;

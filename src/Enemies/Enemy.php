@@ -6,7 +6,7 @@ use Behaviors\Move\MoveInterface;
 use Shootable;
 use Moveable;
 
-abstract class EnemyAbstract implements Shootable, Moveable
+abstract class Enemy implements Shootable, Moveable
 {
 
     protected $maxHp;

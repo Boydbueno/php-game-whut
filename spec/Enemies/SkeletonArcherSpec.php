@@ -22,7 +22,7 @@ class SkeletonArcherSpec extends ObjectBehavior
     function it_should_be_an_enemy()
     {
         $this->shouldHaveType('Enemies\SkeletonArcher');
-        $this->shouldBeAnInstanceOf('Enemies\EnemyAbstract');
+        $this->shouldBeAnInstanceOf('Enemies\Enemy');
     }
 
     function it_should_have_max_hp_of_20()

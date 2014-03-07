@@ -1,7 +1,8 @@
 <?php
 
-namespace spec\Weapons;
+namespace spec\Items\Weapons;
 
+use Items\Weapons\Decorators\WeaponDecorator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -24,4 +25,5 @@ class SwordSpec extends ObjectBehavior
     {
         $this->getDamage()->shouldEqual(10);
     }
+
 }
