@@ -25,7 +25,7 @@ class ElfSpec extends ObjectBehavior
         $this->shouldHaveType('Races\Elf');
     }
 
-    function it_has_stats()
+    function it_has_modify_stats()
     {
         $this->getStats()->getStrength()->shouldEqual(0);
         $this->getStats()->getStamina()->shouldEqual(-2);

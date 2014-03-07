@@ -58,9 +58,4 @@ class Hero
     {
         $this->mainHand = $weapon;
     }
-
-    public function getDexterity()
-    {
-        return $this->getStats()->getDexterity() + $this->race->getStats()->getDexterity();
-    }
 }
