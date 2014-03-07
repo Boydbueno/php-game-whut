@@ -11,7 +11,7 @@ class ZombieSpec extends ObjectBehavior
 {
     function let(Wieldable $weapon, MoveInterface $moveInterface)
     {
-        $weapon->fire()->willReturn("Slashing with melee"); // Todo: Should not need a weapon
+        $weapon->getDamage()->willReturn(0);
         $moveInterface->move()->willReturn("Moving");
 
         $this->beConstructedWith($weapon, $moveInterface);

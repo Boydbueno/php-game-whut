@@ -5,15 +5,15 @@ namespace spec\Enemies;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Items\Interfaces\Wieldable;
+use Items\Weapons\Weapon;
 use Behaviors\Move\MoveInterface;
 
 class SkeletonArcherSpec extends ObjectBehavior
 {
 
-	function let(Wieldable $weapon, MoveInterface $moveInterface)
+	function let(Weapon $weapon, MoveInterface $moveInterface)
 	{
-		$weapon->fire()->willReturn("Shooting arrow");
+        $weapon->getDamage()->willReturn(10);
 		$moveInterface->move()->willReturn("Moving!");
 
 		$this->beConstructedWith($weapon, $moveInterface);

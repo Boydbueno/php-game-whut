@@ -11,9 +11,11 @@ class SwordSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->shouldHaveType('Items\Weapons\Sword');
+    }
+
+    function it_should_be_a_weapon()
+    {
         $this->shouldBeAnInstanceOf('Items\Weapons\Weapon');
-        $this->shouldImplement('Items\Interfaces\Wieldable');
-        $this->shouldImplement('Items\Interfaces\DamageDealable');
     }
 
     function it_can_slash()

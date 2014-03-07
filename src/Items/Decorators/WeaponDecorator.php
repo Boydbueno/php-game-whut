@@ -1,9 +1,9 @@
 <?php namespace Items\Decorators;
 
 use Items\Weapons\Weapon;
-use Items\Interfaces\DamageDealable;
+use Items\Interfaces\Wieldable;
 
-abstract class WeaponDecorator implements DamageDealable {
+abstract class WeaponDecorator implements Wieldable {
 
 	protected $weapon;
 	protected $bonusDamage;
