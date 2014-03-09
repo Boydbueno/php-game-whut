@@ -93,6 +93,11 @@ class Unit implements StatsInterface, Killable {
         return $this->getStats()->getWisdom() + $this->getRace()->getWisdom();
     }
 
+    public function getDamage()
+    {
+        return $this->getStats()->getStrength() + $this->getRace()->getStrength();
+    }
+
     public function getMaxHealth()
     {
         return $this->getJob()->getMaxHealth() + ($this->getStats()->getStamina() * $this->getLevel());

@@ -122,6 +122,11 @@ class UnitSpec extends ObjectBehavior
         $this->getHealth()->shouldEqual(92);
     }
 
+    function it_has_a_damage_number_equal_to_its_strength()
+    {
+        $this->getDamage()->shouldEqual(6);
+    }
+
     function it_can_die()
     {
         $this->takeDamage(9999);
