@@ -9,8 +9,21 @@ class Stats
     private $int;
     private $wis;
 
+    private $default = 0;
+
+    private $stats = [
+        'str',
+        'sta',
+        'dex',
+        'int',
+        'wis'
+    ];
+
     public function __construct($stats)
     {
+
+        $stats = $this->createMissingStats($stats);
+
         $this->str = new Strength($stats['str']);
         $this->sta = new Stamina($stats['sta']);
         $this->dex = new Dexterity($stats['dex']);
@@ -41,5 +54,15 @@ class Stats
     public function getWisdom()
     {
         return $this->wis->get();
+    }
+
+    private function createMissingStats($stats)
+    {
+        foreach ($this->stats as $acronym) {
+            if (!array_key_exists($acronym, $stats)) {
+                $stats[$acronym] = $this->default;
+            }
+        }
+        return $stats;
     }
 }

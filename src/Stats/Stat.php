@@ -10,7 +10,7 @@ abstract class Stat
 
     public function __construct($startValue)
     {
-        $this->value = $startValue;
+        $this->set($startValue);
     }
 
     public function getName()
@@ -30,8 +30,6 @@ abstract class Stat
 
     public function set($value)
     {
-        if(!is_int($value)) throw new ShouldBeIntException();
-
-        $this->value = $value;
+        $this->value = (int)$value;
     }
 } 

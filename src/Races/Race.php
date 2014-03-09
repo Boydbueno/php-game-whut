@@ -5,12 +5,15 @@ use Stats\Interfaces\Stats as StatsInterface;
 
 abstract class Race implements StatsInterface
 {
+
+    protected $statModifiers = [];
+
     protected $name;
     protected $stats;
 
-    public function __construct(Stats $stats)
+    public function __construct()
     {
-        $this->stats = $stats;
+        $this->stats = new Stats($this->statModifiers);
     }
 
     public function getName()

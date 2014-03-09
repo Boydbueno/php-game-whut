@@ -34,9 +34,4 @@ class DexteritySpec extends ObjectBehavior
         $this->set(12);
         $this->get()->shouldEqual(12);
     }
-
-    function it_should_not_allow_string_as_value()
-    {
-        $this->shouldThrow('Stats\Exceptions\ShouldBeIntException')->duringSet('pizza');
-    }
 }

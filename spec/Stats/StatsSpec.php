@@ -11,11 +11,7 @@ class StatsSpec extends ObjectBehavior
     function let()
     {
         $this->beConstructedWith([
-            'str' => 11,
-            'sta' => 13,
-            'dex' => 15,
-            'int' => 10,
-            'wis' => 12
+            'str' => 11
         ]);
     }
 
@@ -26,26 +22,36 @@ class StatsSpec extends ObjectBehavior
 
     function it_should_contain_strength()
     {
-        $this->getStrength()->shouldEqual(11);
+        $this->getStrength()->shouldBeInteger();
     }
 
     function it_should_contain_stamina()
     {
-        $this->getStamina()->shouldEqual(13);
+        $this->getStamina()->shouldBeInteger();
     }
 
     function it_should_contain_dexterity()
     {
-        $this->getDexterity()->shouldEqual(15);
+        $this->getDexterity()->shouldBeInteger();
     }
 
     function it_should_contain_intelligence()
     {
-        $this->getIntelligence()->shouldEqual(10);
+        $this->getIntelligence()->shouldBeInteger();
     }
 
     function it_should_contain_wisdom()
     {
-        $this->getWisdom()->shouldEqual(12);
+        $this->getWisdom()->shouldBeInteger();
+    }
+
+    function it_should_use_array_passed_in_constructor()
+    {
+        $this->getStrength()->shouldEqual(11);
+    }
+
+    function it_will_add_missing_stats_automatically()
+    {
+        $this->getWisdom()->shouldEqual(0);
     }
 }

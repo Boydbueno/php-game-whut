@@ -4,25 +4,23 @@ namespace spec\Races;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Stats\Stats;
 
 class ElfSpec extends ObjectBehavior
 {
 
-    function let(Stats $stats)
-    {
-        $stats->getStrength()->willReturn(0);
-        $stats->getStamina()->willReturn(-2);
-        $stats->getDexterity()->willReturn(2);
-        $stats->getIntelligence()->willReturn(0);
-        $stats->getWisdom()->willReturn(0);
-
-        $this->beConstructedWith($stats);
-    }
-
     function it_is_initializable()
     {
         $this->shouldHaveType('Races\Elf');
+    }
+
+    function it_is_a_race()
+    {
+        $this->shouldImplement('Races\Race');
+    }
+
+    function it_is_named_as_elf()
+    {
+        $this->getName()->shouldEqual('Elf');
     }
 
     function it_has_stamina_penalty()
