@@ -21,6 +21,11 @@ class HeroSpec extends ObjectBehavior
         $stats->getWisdom()->willReturn(14);
 
         $race->getName()->willReturn('Elf');
+        $race->getStrength()->willReturn(-2);
+        $race->getStamina()->willReturn(0);
+        $race->getDexterity()->willReturn(2);
+        $race->getIntelligence()->willReturn(0);
+        $race->getWisdom()->willReturn(0);
         $job->getName()->willReturn('Thief');
 
         $this->beConstructedWith($stats, $race, $job);
@@ -59,6 +64,15 @@ class HeroSpec extends ObjectBehavior
         $this->getStats()->getDexterity()->shouldEqual(16);
         $this->getStats()->getIntelligence()->shouldEqual(11);
         $this->getStats()->getWisdom()->shouldEqual(14);
+    }
+
+    function it_has_stats_modified_by_race()
+    {
+        $this->getStrength()->shouldEqual(6);
+        $this->getStamina()->shouldEqual(12);
+        $this->getDexterity()->shouldEqual(18);
+        $this->getIntelligence()->shouldEqual(11);
+        $this->getWisdom()->shouldEqual(14);
     }
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)

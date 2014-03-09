@@ -1,11 +1,12 @@
 <?php
 
 use Items\Interfaces\Wieldable;
+use Stats\Interfaces\Stats as StatsInterface;
 use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
 
-class Hero
+class Hero implements StatsInterface
 {
 
     protected $stats;
@@ -57,5 +58,30 @@ class Hero
     public function setMainHand(Wieldable $weapon)
     {
         $this->mainHand = $weapon;
+    }
+
+    public function getStrength()
+    {
+        return $this->getStats()->getStrength() + $this->getRace()->getStrength();
+    }
+
+    public function getStamina()
+    {
+        return $this->getStats()->getStamina() + $this->getRace()->getStamina();
+    }
+
+    public function getDexterity()
+    {
+        return $this->getStats()->getDexterity() + $this->getRace()->getDexterity();
+    }
+
+    public function getIntelligence()
+    {
+        return $this->getStats()->getIntelligence() + $this->getRace()->getIntelligence();
+    }
+
+    public function getWisdom()
+    {
+        return $this->getStats()->getWisdom() + $this->getRace()->getWisdom();
     }
 }
