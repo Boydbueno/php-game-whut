@@ -25,12 +25,13 @@ class ElfSpec extends ObjectBehavior
         $this->shouldHaveType('Races\Elf');
     }
 
-    function it_has_modify_stats()
+    function it_has_stamina_penalty()
     {
-        $this->getStats()->getStrength()->shouldEqual(0);
-        $this->getStats()->getStamina()->shouldEqual(-2);
-        $this->getStats()->getDexterity()->shouldEqual(2);
-        $this->getStats()->getIntelligence()->shouldEqual(0);
-        $this->getStats()->getWisdom()->shouldEqual(0);
+        $this->getStamina()->shouldEqual(-2);
+    }
+
+    function it_has_dexterity_bonus()
+    {
+        $this->getDexterity()->shouldEqual(2);
     }
 }
