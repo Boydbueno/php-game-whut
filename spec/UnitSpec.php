@@ -26,7 +26,9 @@ class UnitSpec extends ObjectBehavior
         $race->getDexterity()->willReturn(2);
         $race->getIntelligence()->willReturn(0);
         $race->getWisdom()->willReturn(0);
+
         $job->getName()->willReturn('Thief');
+        $job->getMaxHealth()->willReturn(100);
 
         $this->beConstructedWith($stats, $race, $job);
     }
@@ -57,6 +59,11 @@ class UnitSpec extends ObjectBehavior
         $this->getJob()->getName()->shouldEqual('Thief');
     }
 
+    function it_has_a_max_health()
+    {
+        $this->getMaxHealth()->shouldEqual(112);
+    }
+
     function it_has_stats()
     {
         $this->getStats()->getStrength()->shouldEqual(8);
@@ -73,6 +80,27 @@ class UnitSpec extends ObjectBehavior
         $this->getDexterity()->shouldEqual(18);
         $this->getIntelligence()->shouldEqual(11);
         $this->getWisdom()->shouldEqual(14);
+    }
+
+    function it_has_starting_health_equal_to_max_health()
+    {
+        $this->getHealth()->shouldEqual(112);
+    }
+
+    function it_can_take_damage()
+    {
+        $this->takeDamage(20);
+        $this->getHealth()->shouldEqual(92);
+    }
+
+    function it_should_increase_max_health_on_level_up()
+    {
+        $this->getLevel()->shouldEqual(1);
+        $this->getMaxHealth()->shouldEqual(112);
+
+        $this->levelUp();
+        $this->getMaxHealth()->shouldEqual(124);
+
     }
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)

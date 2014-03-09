@@ -8,6 +8,8 @@ use Jobs\Job;
 
 class Unit implements StatsInterface {
 
+    protected $health;
+
     protected $stats;
     protected $race;
     protected $job;
@@ -22,6 +24,8 @@ class Unit implements StatsInterface {
         $this->job = $job;
 
         $this->level = $level;
+
+        $this->health = $this->getMaxHealth();
     }
 
     public function getStats()
@@ -82,5 +86,20 @@ class Unit implements StatsInterface {
     public function getWisdom()
     {
         return $this->getStats()->getWisdom() + $this->getRace()->getWisdom();
+    }
+
+    public function getMaxHealth()
+    {
+        return $this->getJob()->getMaxHealth() + ($this->getStats()->getStamina() * $this->getLevel());
+    }
+
+    public function getHealth()
+    {
+        return $this->health;
+    }
+
+    public function takeDamage($damage)
+    {
+        $this->health -= $damage;
     }
 }
