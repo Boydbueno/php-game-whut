@@ -6,8 +6,7 @@ use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
 
-class Hero implements StatsInterface
-{
+class Unit implements StatsInterface {
 
     protected $stats;
     protected $race;
@@ -32,7 +31,7 @@ class Hero implements StatsInterface
 
     public function getRace()
     {
-       return $this->race;
+        return $this->race;
     }
 
     public function getJob()

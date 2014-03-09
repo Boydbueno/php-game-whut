@@ -9,7 +9,7 @@ use Races\Race;
 use Jobs\Job;
 use Stats\Stats;
 
-class HeroSpec extends ObjectBehavior
+class UnitSpec extends ObjectBehavior
 {
 
     function let(Stats $stats, Race $race, Job $job)
@@ -33,7 +33,7 @@ class HeroSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Hero');
+        $this->shouldHaveType('Unit');
     }
 
     function it_should_have_a_level()
