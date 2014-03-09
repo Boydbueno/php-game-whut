@@ -124,11 +124,14 @@
   72  ✔ has stats
   81  ✔ has stats modified by race
   90  ✔ has starting health equal to max health
-  95  ✔ can take damage
- 101  ✔ should increase max health on level up
- 110  ✔ can equip a wieldable in main hand
+  95  ✔ its health cant exceed max health
+ 101  ✔ its health cant drop below zero
+ 107  ✔ should increase max health on level up
+ 116  ✔ can take damage
+ 122  ✔ can die
+ 128  ✔ can equip a wieldable in main hand
 
 
 18 specs
-75 examples (75 passed)
-237ms
+78 examples (78 passed)
+281ms

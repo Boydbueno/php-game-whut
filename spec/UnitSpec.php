@@ -92,10 +92,16 @@ class UnitSpec extends ObjectBehavior
         $this->getHealth()->shouldEqual(112);
     }
 
-    function it_can_take_damage()
+    function its_health_cant_exceed_max_health()
     {
-        $this->takeDamage(20);
-        $this->getHealth()->shouldEqual(92);
+        $this->setHealth(9999);
+        $this->getHealth()->shouldEqual(112);
+    }
+
+    function its_health_cant_drop_below_zero()
+    {
+        $this->takeDamage(9999);
+        $this->getHealth()->shouldEqual(0);
     }
 
     function it_should_increase_max_health_on_level_up()
@@ -105,6 +111,18 @@ class UnitSpec extends ObjectBehavior
 
         $this->levelUp();
         $this->getMaxHealth()->shouldEqual(124);
+    }
+
+    function it_can_take_damage()
+    {
+        $this->takeDamage(20);
+        $this->getHealth()->shouldEqual(92);
+    }
+
+    function it_can_die()
+    {
+        $this->takeDamage(9999);
+        $this->shouldBeDead();
     }
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)

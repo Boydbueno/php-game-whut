@@ -98,8 +98,24 @@ class Unit implements StatsInterface, Killable {
         return $this->health;
     }
 
+    public function setHealth($health)
+    {
+        if($health > $this->getMaxHealth())
+            $health = $this->getMaxHealth();
+
+        if($health < 0)
+            $health = 0;
+
+        $this->health = $health;
+    }
+
     public function takeDamage($damage)
     {
-        $this->health -= $damage;
+        $this->setHealth($this->getHealth() - $damage);
+    }
+
+    public function isDead()
+    {
+        return ($this->getHealth() === 0);
     }
 }
