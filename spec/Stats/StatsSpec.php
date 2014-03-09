@@ -45,7 +45,7 @@ class StatsSpec extends ObjectBehavior
         $this->getWisdom()->shouldBeInteger();
     }
 
-    function it_should_use_array_passed_in_constructor()
+    function it_should_use_array_passed_in_constructor_as_values()
     {
         $this->getStrength()->shouldEqual(11);
     }
