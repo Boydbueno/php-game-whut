@@ -9,7 +9,8 @@ class CombatManager implements CombatManagerInterface
 
     function attack(Unit $attacker, Killable $target)
     {
-        return "Attacker attacks target";
+        $damage = $attacker->getDamage();
+        $target->takeDamage($damage);
     }
 
 }
