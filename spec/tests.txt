@@ -114,24 +114,25 @@
 
       Unit
 
-  36  ✔ is initializable
-  41  ✔ is killable
-  46  ✔ should have a level
-  51  ✔ can level up
-  57  ✔ should have a race
-  62  ✔ should have a job
-  67  ✔ has a max health
-  72  ✔ has stats
-  81  ✔ has stats modified by race
-  90  ✔ has starting health equal to max health
-  95  ✔ its health cant exceed max health
- 101  ✔ its health cant drop below zero
- 107  ✔ should increase max health on level up
- 116  ✔ can take damage
- 122  ✔ can die
- 128  ✔ can equip a wieldable in main hand
+  39  ✔ is initializable
+  44  ✔ is killable
+  49  ✔ should have a level
+  54  ✔ can level up
+  60  ✔ should have a race
+  65  ✔ should have a job
+  70  ✔ has a max health
+  75  ✔ has stats
+  84  ✔ has stats modified by race
+  93  ✔ has starting health equal to max health
+  98  ✔ its health cant exceed max health
+ 104  ✔ its health cant drop below zero
+ 110  ✔ should increase max health on level up
+ 119  ✔ can take damage
+ 125  ✔ can die
+ 131  ✔ can equip a wieldable in main hand
+ 136  ✔ will delegate attacking to a combat manager
 
 
 18 specs
-78 examples (78 passed)
-281ms
+79 examples (79 passed)
+284ms

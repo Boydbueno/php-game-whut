@@ -2,6 +2,7 @@
 
 use Items\Interfaces\Wieldable;
 use Stats\Interfaces\Stats as StatsInterface;
+use Managers\Interfaces\CombatManager;
 use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
@@ -17,7 +18,9 @@ class Unit implements StatsInterface, Killable {
 
     protected $mainHand;
 
-    public function __construct(Stats $stats, Race $race, Job $job, $level = 1)
+    protected $combatManager;
+
+    public function __construct(Stats $stats, Race $race, Job $job, CombatManager $combatManager, $level = 1)
     {
         $this->stats = $stats;
         $this->race = $race;
@@ -26,6 +29,8 @@ class Unit implements StatsInterface, Killable {
         $this->level = $level;
 
         $this->health = $this->getMaxHealth();
+
+        $this->combatManager = $combatManager;
     }
 
     public function getStats()
@@ -53,9 +58,9 @@ class Unit implements StatsInterface, Killable {
         $this->level++;
     }
 
-    public function attack()
+    public function attack(Killable $target)
     {
-        return $this->mainHand->getDamage();
+        $this->getCombatManager()->attack($this, $target);
     }
 
     public function setMainHand(Wieldable $weapon)
@@ -117,5 +122,10 @@ class Unit implements StatsInterface, Killable {
     public function isDead()
     {
         return ($this->getHealth() === 0);
+    }
+
+    function getCombatManager()
+    {
+        return $this->combatManager;
     }
 }

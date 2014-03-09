@@ -5,14 +5,17 @@ namespace spec;
 use Items\Interfaces\Wieldable;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+
+use Managers\Interfaces\CombatManager;
+use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
-use Stats\Stats;
+use Unit;
 
 class UnitSpec extends ObjectBehavior
 {
 
-    function let(Stats $stats, Race $race, Job $job)
+    function let(Stats $stats, Race $race, Job $job, CombatManager $combatMediator)
     {
         $stats->getStrength()->willReturn(8);
         $stats->getStamina()->willReturn(12);
@@ -30,7 +33,7 @@ class UnitSpec extends ObjectBehavior
         $job->getName()->willReturn('Thief');
         $job->getMaxHealth()->willReturn(100);
 
-        $this->beConstructedWith($stats, $race, $job);
+        $this->beConstructedWith($stats, $race, $job, $combatMediator);
     }
 
     function it_is_initializable()
@@ -127,9 +130,14 @@ class UnitSpec extends ObjectBehavior
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)
     {
-        $weapon->getDamage()->willReturn(10);
-
         $this->setMainHand($weapon);
-        $this->attack()->shouldEqual(10);
+    }
+
+    function it_will_delegate_attacking_to_a_combat_manager(CombatManager $combatMediator, Unit $unit)
+    {
+        $combatMediator->attack($this, $unit)->shouldBeCalled();
+
+        // when
+        $this->attack($unit);
     }
 }
