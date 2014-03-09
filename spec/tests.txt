@@ -115,19 +115,20 @@
       Unit
 
   36  ✔ is initializable
-  41  ✔ should have a level
-  46  ✔ can level up
-  52  ✔ should have a race
-  57  ✔ should have a job
-  62  ✔ has a max health
-  67  ✔ has stats
-  76  ✔ has stats modified by race
-  85  ✔ has starting health equal to max health
-  90  ✔ can take damage
-  96  ✔ should increase max health on level up
- 106  ✔ can equip a wieldable in main hand
+  41  ✔ is killable
+  46  ✔ should have a level
+  51  ✔ can level up
+  57  ✔ should have a race
+  62  ✔ should have a job
+  67  ✔ has a max health
+  72  ✔ has stats
+  81  ✔ has stats modified by race
+  90  ✔ has starting health equal to max health
+  95  ✔ can take damage
+ 101  ✔ should increase max health on level up
+ 110  ✔ can equip a wieldable in main hand
 
 
 18 specs
-74 examples (74 passed)
-231ms
+75 examples (75 passed)
+237ms

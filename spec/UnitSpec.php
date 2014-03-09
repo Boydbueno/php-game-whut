@@ -38,6 +38,11 @@ class UnitSpec extends ObjectBehavior
         $this->shouldHaveType('Unit');
     }
 
+    function it_is_killable()
+    {
+        $this->shouldImplement('Killable');
+    }
+
     function it_should_have_a_level()
     {
         $this->getLevel()->shouldEqual(1);
@@ -100,7 +105,6 @@ class UnitSpec extends ObjectBehavior
 
         $this->levelUp();
         $this->getMaxHealth()->shouldEqual(124);
-
     }
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)

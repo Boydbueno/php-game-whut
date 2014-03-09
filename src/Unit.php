@@ -6,7 +6,7 @@ use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
 
-class Unit implements StatsInterface {
+class Unit implements StatsInterface, Killable {
 
     protected $health;
 
