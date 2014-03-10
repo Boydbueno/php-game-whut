@@ -10,6 +10,7 @@ use Managers\Interfaces\CombatManager;
 use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
+use Killable;
 use Unit;
 
 class UnitSpec extends ObjectBehavior
@@ -131,6 +132,12 @@ class UnitSpec extends ObjectBehavior
     {
         $this->takeDamage(9999);
         $this->shouldBeDead();
+    }
+
+    function it_cant_attack_when_dead(Killable $target)
+    {
+        $this->takeDamage(9999);
+        $this->shouldThrow('Exceptions\CantActWhenDeadException')->duringAttack($target);
     }
 
     function it_can_equip_a_wieldable_in_main_hand(Wieldable $weapon)

@@ -1,5 +1,7 @@
 <?php
 
+use Exceptions\CantActWhenDeadException;
+
 use Items\Interfaces\Wieldable;
 use Stats\Interfaces\Stats as StatsInterface;
 use Managers\Interfaces\CombatManager;
@@ -60,6 +62,9 @@ class Unit implements StatsInterface, Killable {
 
     public function attack(Killable $target)
     {
+        if($this->isDead())
+            throw new CantActWhenDeadException();
+
         $this->getCombatManager()->attack($this, $target);
     }
 
