@@ -45,6 +45,9 @@ class UnitSpec extends ObjectBehavior
     function it_is_killable()
     {
         $this->shouldImplement('Killable');
+
+        $this->takeDamage(9999);
+        $this->shouldBeDead();
     }
 
     function it_should_have_a_level()
@@ -126,12 +129,6 @@ class UnitSpec extends ObjectBehavior
     function it_has_a_damage_number_equal_to_its_strength()
     {
         $this->getDamage()->shouldEqual(6);
-    }
-
-    function it_can_die()
-    {
-        $this->takeDamage(9999);
-        $this->shouldBeDead();
     }
 
     function it_cant_attack_when_dead(Killable $target)
