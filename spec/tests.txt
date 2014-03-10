@@ -1,7 +1,19 @@
 
+      Behaviors\AI\Aggressive
+
+  10  ✔ is initializable
+  15  ✔ should be an AI behavior
+  20  ✔ should act aggressively
+
+      Behaviors\AI\Scared
+
+  10  ✔ is initializable
+  15  ✔ should be an AI behavior
+  20  ✔ should act scared
+
       Behaviors\Move\Fly
 
-  10  ✔ is initializable (144ms)
+  10  ✔ is initializable
   15  ✔ should fly when moving
 
       Behaviors\Move\Walk
@@ -54,7 +66,7 @@
 
   14  ✔ is initializable
   19  ✔ is a combat manager
-  24  ✔ manages combat (139ms)
+  24  ✔ manages combat
 
       Races\Elf
 
@@ -140,6 +152,6 @@
  141  ✔ will delegate attacking to a combat manager
 
 
-19 specs
-83 examples (83 passed)
-569ms
+21 specs
+89 examples (89 passed)
+255ms
