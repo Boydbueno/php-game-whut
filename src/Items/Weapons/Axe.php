@@ -2,10 +2,10 @@
 
 class Axe extends Weapon
 {
-	protected $damage = 14;
+    protected $damage = 14;
 
-	public function fire()
-	{
-		return "Chopping with axe";
-	}
+    public function fire()
+    {
+        return "Chopping with axe";
+    }
 }

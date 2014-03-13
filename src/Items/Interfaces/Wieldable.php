@@ -1,5 +1,6 @@
 <?php namespace Items\Interfaces;
 
-interface Wieldable {
+interface Wieldable
+{
     function getDamage();
 }

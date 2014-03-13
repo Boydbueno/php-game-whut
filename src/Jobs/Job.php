@@ -1,6 +1,7 @@
 <?php namespace Jobs;
 
-abstract class Job {
+abstract class Job
+{
 
     protected $name;
     protected $maxHealth;

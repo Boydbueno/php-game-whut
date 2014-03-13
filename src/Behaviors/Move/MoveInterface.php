@@ -1,5 +1,6 @@
 <?php namespace Behaviors\Move;
 
-interface MoveInterface {
-	function move();
+interface MoveInterface
+{
+    function move();
 }

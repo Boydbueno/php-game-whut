@@ -1,5 +1,6 @@
 <?php namespace Behaviors\AI\Interfaces;
 
-interface IAI {
+interface IAI
+{
     function act();
 }

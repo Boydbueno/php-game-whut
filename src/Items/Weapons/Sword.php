@@ -2,7 +2,7 @@
 
 class Sword extends Weapon
 {
-	protected $damage = 10;
+    protected $damage = 10;
 
     public function fire()
     {

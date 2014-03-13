@@ -1,6 +1,6 @@
 <?php
 
-namespace spec;
+namespace spec\Units;
 
 use Items\Interfaces\Wieldable;
 use PhpSpec\ObjectBehavior;
@@ -8,10 +8,10 @@ use Prophecy\Argument;
 
 use Managers\Interfaces\CombatManager;
 use Stats\Stats;
+use Units\Unit;
 use Races\Race;
 use Jobs\Job;
 use Killable;
-use Unit;
 
 class UnitSpec extends ObjectBehavior
 {
@@ -39,7 +39,7 @@ class UnitSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Unit');
+        $this->shouldHaveType('Units\Unit');
     }
 
     function it_is_killable()
@@ -59,6 +59,11 @@ class UnitSpec extends ObjectBehavior
     {
         $this->levelUp();
         $this->getLevel()->shouldEqual(2);
+    }
+
+    function it_can_move()
+    {
+        $this->move()->shouldEqual('Moving');
     }
 
     function it_should_have_a_race()

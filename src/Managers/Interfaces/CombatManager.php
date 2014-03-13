@@ -1,8 +1,9 @@
 <?php namespace Managers\Interfaces;
 
 use Killable;
-use Unit;
+use Units\Unit;
 
-interface CombatManager {
+interface CombatManager
+{
     function attack(Unit $attacker, Killable $target);
 }

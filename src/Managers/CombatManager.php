@@ -2,7 +2,7 @@
 
 use Managers\Interfaces\CombatManager as CombatManagerInterface;
 use Killable;
-use Unit;
+use Units\Unit;
 
 class CombatManager implements CombatManagerInterface
 {

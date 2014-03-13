@@ -6,7 +6,8 @@ abstract class Weapon implements Wieldable
 {
     protected $damage;
 
-    public function getDamage() {
-    	return $this->damage;
+    public function getDamage()
+    {
+        return $this->damage;
     }
 }

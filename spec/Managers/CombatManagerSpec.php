@@ -5,7 +5,7 @@ namespace spec\Managers;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Unit;
+use Units\Unit;
 use Killable;
 
 class CombatManagerSpec extends ObjectBehavior

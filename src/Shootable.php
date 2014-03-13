@@ -1,5 +1,6 @@
 <?php
 
-interface Shootable {
-	function shoot();
+interface Shootable
+{
+    function shoot();
 }

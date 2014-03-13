@@ -1,3 +1,5 @@
 <?php namespace Exceptions;
 
-class CantActWhenDeadException extends \Exception {}
+class CantActWhenDeadException extends \Exception
+{
+}

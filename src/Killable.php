@@ -1,8 +1,12 @@
 <?php
 
-interface Killable {
+interface Killable
+{
     function getMaxHealth();
+
     function getHealth();
+
     function takeDamage($damage);
+
     function isDead();
 }

@@ -1,5 +1,6 @@
 <?php
 
-interface Moveable {
-	function move();
+interface Moveable
+{
+    function move();
 }

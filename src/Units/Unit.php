@@ -1,4 +1,4 @@
-<?php
+<?php namespace Units;
 
 use Exceptions\CantActWhenDeadException;
 
@@ -8,9 +8,10 @@ use Managers\Interfaces\CombatManager;
 use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
+use Killable;
 
-class Unit implements StatsInterface, Killable {
-
+class Unit implements StatsInterface, Killable
+{
     protected $health;
 
     protected $stats;
@@ -62,7 +63,7 @@ class Unit implements StatsInterface, Killable {
 
     public function attack(Killable $target)
     {
-        if($this->isDead())
+        if ($this->isDead())
             throw new CantActWhenDeadException();
 
         $this->getCombatManager()->attack($this, $target);
@@ -115,10 +116,10 @@ class Unit implements StatsInterface, Killable {
 
     public function setHealth($health)
     {
-        if($health > $this->getMaxHealth())
+        if ($health > $this->getMaxHealth())
             $health = $this->getMaxHealth();
 
-        if($health < 0)
+        if ($health < 0)
             $health = 0;
 
         $this->health = $health;
@@ -137,5 +138,10 @@ class Unit implements StatsInterface, Killable {
     function getCombatManager()
     {
         return $this->combatManager;
+    }
+
+    public function move()
+    {
+        return "Moving";
     }
 }
