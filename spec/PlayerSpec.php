@@ -8,12 +8,13 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Races\Race;
 use Stats\Stats;
+use Game;
 
 class PlayerSpec extends ObjectBehavior
 {
-    function let(Stats $stats, Race $race, Job $job, CombatManager $combatManager)
+    function let(Game $game, Stats $stats, Race $race, Job $job)
     {
-        $this->beConstructedWith($stats, $race, $job, $combatManager);
+        $this->beConstructedWith($game, $stats, $race, $job);
     }
 
     function it_is_initializable()

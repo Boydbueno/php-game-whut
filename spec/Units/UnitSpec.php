@@ -12,11 +12,12 @@ use Units\Unit;
 use Races\Race;
 use Jobs\Job;
 use Killable;
+use Game;
 
 class UnitSpec extends ObjectBehavior
 {
 
-    function let(Stats $stats, Race $race, Job $job, CombatManager $combatMediator)
+    function let(Game $game, Stats $stats, Race $race, Job $job)
     {
         $stats->getStrength()->willReturn(8);
         $stats->getStamina()->willReturn(12);
@@ -34,7 +35,7 @@ class UnitSpec extends ObjectBehavior
         $job->getName()->willReturn('Thief');
         $job->getMaxHealth()->willReturn(100);
 
-        $this->beConstructedWith($stats, $race, $job, $combatMediator);
+        $this->beConstructedWith($game, $stats, $race, $job);
     }
 
     function it_is_initializable()
@@ -147,9 +148,9 @@ class UnitSpec extends ObjectBehavior
         $this->setMainHand($weapon);
     }
 
-    function it_will_delegate_attacking_to_a_combat_manager(CombatManager $combatMediator, Unit $unit)
+    function it_will_delegate_attacking_to_the_game(Game $game, Unit $unit)
     {
-        $combatMediator->attack($this, $unit)->shouldBeCalled();
+        $game->attack($this, $unit)->shouldBeCalled();
 
         // when
         $this->attack($unit);

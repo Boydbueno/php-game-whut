@@ -21,22 +21,9 @@
   10  ✔ is initializable
   15  ✔ should walk when moving
 
-      Enemies\EnemyCollection
+      Game
 
-  12  ✔ is initializable
-  17  ✔ stores a collection of enemies
-  24  ✔ can store multiple enemies in one go
-
-      Enemies\SkeletonArcher
-
-  22  ✔ should be an enemy
-  28  ✔ should have max hp of 20
-  33  ✔ should have 15 dexterity
-
-      Enemies\Zombie
-
-  20  ✔ should be an enemy
-  26  ✔ should have a max hp of 30
+  16  ✔ is initializable
 
       Items\Decorators\Flaming
 
@@ -67,6 +54,17 @@
   14  ✔ is initializable
   19  ✔ is a combat manager
   24  ✔ manages combat
+
+      Managers\TurnManager
+
+  14  ✔ is initializable
+  19  ✔ stores a collection of actables
+  30  ✔ can notify its observers to update
+
+      Player
+
+  20  ✔ is initializable
+  25  ✔ is a unit
 
       Races\Elf
 
@@ -130,28 +128,29 @@
   26  ✔ should have an acronym
   31  ✔ should have a value
 
-      Unit
+      Units\Unit
 
-  40  ✔ is initializable
-  45  ✔ is killable
-  53  ✔ should have a level
-  58  ✔ can level up
-  64  ✔ should have a race
-  69  ✔ should have a job
-  74  ✔ has a max health
-  79  ✔ has stats
-  88  ✔ has stats modified by race
-  97  ✔ has starting health equal to max health
- 102  ✔ its health cant exceed max health
- 108  ✔ its health cant drop below zero
- 114  ✔ should increase max health on level up
- 123  ✔ can take damage
- 129  ✔ has a damage number equal to its strength
- 134  ✔ cant attack when dead
- 140  ✔ can equip a wieldable in main hand
- 145  ✔ will delegate attacking to a combat manager
+  41  ✔ is initializable
+  46  ✔ is killable
+  54  ✔ should have a level
+  59  ✔ can level up
+  65  ✔ can move
+  70  ✔ should have a race
+  75  ✔ should have a job
+  80  ✔ has a max health
+  85  ✔ has stats
+  94  ✔ has stats modified by race
+ 103  ✔ has starting health equal to max health
+ 108  ✔ its health cant exceed max health
+ 114  ✔ its health cant drop below zero
+ 120  ✔ should increase max health on level up
+ 129  ✔ can take damage
+ 135  ✔ has a damage number equal to its strength
+ 140  ✔ cant attack when dead
+ 146  ✔ can equip a wieldable in main hand
+ 151  ✔ will delegate attacking to the game
 
 
 21 specs
-89 examples (89 passed)
-258ms
+88 examples (88 passed)
+272ms

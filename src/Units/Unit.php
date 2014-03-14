@@ -10,6 +10,7 @@ use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
 use Killable;
+use Game;
 
 class Unit implements StatsInterface, Killable, Actable
 {
@@ -24,8 +25,9 @@ class Unit implements StatsInterface, Killable, Actable
 
     protected $combatManager;
 
-    public function __construct(Stats $stats, Race $race, Job $job, CombatManager $combatManager, $level = 1)
+    public function __construct(Game $game, Stats $stats, Race $race, Job $job, $level = 1)
     {
+        $this->game = $game;
         $this->stats = $stats;
         $this->race = $race;
         $this->job = $job;
@@ -33,8 +35,11 @@ class Unit implements StatsInterface, Killable, Actable
         $this->level = $level;
 
         $this->health = $this->getMaxHealth();
+    }
 
-        $this->combatManager = $combatManager;
+    public function getGame()
+    {
+        return $this->game;
     }
 
     public function getStats()
@@ -67,7 +72,7 @@ class Unit implements StatsInterface, Killable, Actable
         if ($this->isDead())
             throw new CantActWhenDeadException();
 
-        $this->getCombatManager()->attack($this, $target);
+        $this->getGame()->attack($this, $target);
     }
 
     public function setMainHand(Wieldable $weapon)
@@ -136,17 +141,12 @@ class Unit implements StatsInterface, Killable, Actable
         return ($this->getHealth() === 0);
     }
 
-    function getCombatManager()
-    {
-        return $this->combatManager;
-    }
-
     public function move()
     {
         return "Moving";
     }
 
-    function act()
+    function update(\SplSubject $subject)
     {
 
     }

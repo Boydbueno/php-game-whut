@@ -2,12 +2,12 @@
 
 namespace Managers;
 
-class TurnManager
+class TurnManager implements \SplSubject
 {
 
     private $observers = [];
 
-    public function attach($observer)
+    public function attach(\SplObserver $observer)
     {
         $this->observers[] = $observer;
     }
@@ -17,7 +17,7 @@ class TurnManager
         return $this->observers;
     }
 
-    public function detach($observer)
+    public function detach(\SplObserver $observer)
     {
         $index = array_search($observer, $this->observers);
 
@@ -25,6 +25,12 @@ class TurnManager
         {
             unset($this->observers[$index]);
         }
+    }
 
+    public function notify()
+    {
+        foreach($this->observers as $observer) {
+            $observer->update($this);
+        }
     }
 }

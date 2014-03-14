@@ -2,10 +2,12 @@
 
 namespace spec\Managers;
 
+use Managers\TurnManager;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use Interfaces\Actable;
+use Units\Unit;
 
 class TurnManagerSpec extends ObjectBehavior
 {
@@ -23,5 +25,17 @@ class TurnManagerSpec extends ObjectBehavior
 
         $this->detach($actable2);
         $this->getObservers()->shouldHaveCount(1);
+    }
+
+    function it_can_notify_its_observers_to_update(\SplObserver $actable1, \SplObserver $actable2)
+    {
+        $actable1->update($this)->shouldBeCalled();
+        $actable2->update($this)->shouldBeCalled();
+
+        $this->attach($actable1);
+        $this->attach($actable2);
+
+        // when
+        $this->notify();
     }
 }

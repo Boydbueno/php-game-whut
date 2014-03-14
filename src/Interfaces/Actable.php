@@ -1,5 +1,3 @@
 <?php namespace Interfaces;
 
-interface Actable {
-    function act();
-}
+interface Actable extends \SplObserver {}

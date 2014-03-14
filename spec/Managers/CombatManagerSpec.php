@@ -25,6 +25,7 @@ class CombatManagerSpec extends ObjectBehavior
     {
         $target->takeDamage(10)->shouldBeCalled();
 
+        // when
         $attacker->getDamage()->willReturn(10);
         $target->getHealth()->willReturn(20);
 
