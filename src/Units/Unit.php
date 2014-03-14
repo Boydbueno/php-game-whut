@@ -2,6 +2,7 @@
 
 use Exceptions\CantActWhenDeadException;
 
+use Interfaces\Actable;
 use Items\Interfaces\Wieldable;
 use Stats\Interfaces\Stats as StatsInterface;
 use Managers\Interfaces\CombatManager;
@@ -10,7 +11,7 @@ use Races\Race;
 use Jobs\Job;
 use Killable;
 
-class Unit implements StatsInterface, Killable
+class Unit implements StatsInterface, Killable, Actable
 {
     protected $health;
 
@@ -143,5 +144,10 @@ class Unit implements StatsInterface, Killable
     public function move()
     {
         return "Moving";
+    }
+
+    function act()
+    {
+
     }
 }

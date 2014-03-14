@@ -25,9 +25,4 @@ class PlayerSpec extends ObjectBehavior
     {
         $this->shouldBeAnInstanceOf('Units\Unit');
     }
-
-    function it_is_controllable()
-    {
-        $this->shouldImplement('Interfaces\Controllable');
-    }
 }
