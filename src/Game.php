@@ -18,4 +18,9 @@ class Game
     {
         $this->combatManager->attack($unit, $target);
     }
+
+    public function turn($time)
+    {
+
+    }
 }

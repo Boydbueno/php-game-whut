@@ -25,4 +25,12 @@ class PlayerSpec extends ObjectBehavior
     {
         $this->shouldBeAnInstanceOf('Units\Unit');
     }
+
+    function it_should_notify_game_when_is_has_performed_an_action(Game $game)
+    {
+        $game->turn(100)->shouldBeCalled();
+
+        // when
+        $this->act(100);
+    }
 }

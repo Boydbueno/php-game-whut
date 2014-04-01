@@ -5,7 +5,6 @@ use Exceptions\CantActWhenDeadException;
 use Interfaces\Actable;
 use Items\Interfaces\Wieldable;
 use Stats\Interfaces\Stats as StatsInterface;
-use Managers\Interfaces\CombatManager;
 use Stats\Stats;
 use Races\Race;
 use Jobs\Job;
@@ -148,6 +147,6 @@ class Unit implements StatsInterface, Killable, Actable
 
     function update(\SplSubject $subject)
     {
-
+        // TODO: Implement
     }
 }
