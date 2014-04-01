@@ -3,4 +3,5 @@
 interface Wieldable
 {
     function getDamage();
+    function getDamageType();
 }

@@ -1,22 +1,26 @@
 <?php namespace Items\Decorators;
 
-use Items\Weapons\Weapon;
 use Items\Interfaces\Wieldable;
 
 abstract class WeaponDecorator implements Wieldable
 {
 
-    protected $weapon;
+    protected $wieldable;
     protected $bonusDamage;
 
-    public function __construct(Weapon $weapon)
+    public function __construct(Wieldable $wieldable)
     {
-        $this->weapon = $weapon;
+        $this->wieldable = $wieldable;
     }
 
     public function getDamage()
     {
-        return $this->getBonusDamage() + $this->weapon->getDamage();
+        return $this->getBonusDamage() + $this->wieldable->getDamage();
+    }
+
+    public function getDamageType()
+    {
+        return $this->damageType;
     }
 
     public function getBonusDamage()

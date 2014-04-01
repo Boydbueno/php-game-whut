@@ -1,7 +1,7 @@
 
       Behaviors\AI\Aggressive
 
-  10  ✔ is initializable
+  10  ✔ is initializable (245ms)
   15  ✔ should be an AI behavior
   20  ✔ should act aggressively
 
@@ -23,7 +23,7 @@
 
       Game
 
-  16  ✔ is initializable
+  16  ✔ is initializable (84ms)
 
       Items\Decorators\Flaming
 
@@ -39,15 +39,21 @@
 
   10  ✔ is initializable
   15  ✔ is a weapon
-  20  ✔ can chop
-  25  ✔ has a damage number of 14
+  20  ✔ has a damage number of 14
+
+      Items\Weapons\Mace
+
+  10  ✔ is initializable
+  15  ✔ is a weapon
+  20  ✔ has a damage number of 12
+  25  ✔ does blunt damage
+  30  ✔ can stun
 
       Items\Weapons\Sword
 
   11  ✔ is initializable
   16  ✔ should be a weapon
-  21  ✔ can slash
-  26  ✔ has a damage number of 10
+  21  ✔ has a damage number of 10
 
       Managers\CombatManager
 
@@ -57,14 +63,15 @@
 
       Managers\TurnManager
 
-  14  ✔ is initializable
-  19  ✔ stores a collection of actables
-  30  ✔ can notify its observers to update
+  12  ✔ is initializable
+  17  ✔ stores a collection of actables
+  28  ✔ can notify its observers to update
 
       Player
 
-  20  ✔ is initializable
-  25  ✔ is a unit
+  19  ✔ is initializable
+  24  ✔ is a unit
+  29  ✔ should notify game when is has performed an action
 
       Races\Elf
 
@@ -151,6 +158,6 @@
  151  ✔ will delegate attacking to the game
 
 
-21 specs
-88 examples (88 passed)
-272ms
+22 specs
+92 examples (92 passed)
+823ms
