@@ -1,7 +1,7 @@
 
       Behaviors\AI\Aggressive
 
-  10  ✔ is initializable (245ms)
+  10  ✔ is initializable
   15  ✔ should be an AI behavior
   20  ✔ should act aggressively
 
@@ -23,7 +23,7 @@
 
       Game
 
-  16  ✔ is initializable (84ms)
+  14  ✔ is initializable
 
       Items\Decorators\Flaming
 
@@ -37,23 +37,26 @@
 
       Items\Weapons\Axe
 
-  10  ✔ is initializable
-  15  ✔ is a weapon
-  20  ✔ has a damage number of 14
+   8  ✔ is initializable
+  13  ✔ is a weapon
+  18  ✔ has a damage number of 14
+  23  ✔ does slashing and blunt damage
 
       Items\Weapons\Mace
 
-  10  ✔ is initializable
-  15  ✔ is a weapon
-  20  ✔ has a damage number of 12
-  25  ✔ does blunt damage
-  30  ✔ can stun
+   8  ✔ is initializable
+  13  ✔ is a weapon
+  18  ✔ has a damage number of 12
+  23  ✔ does blunt damage
+  28  - can stun
+        todo: write pending example
 
       Items\Weapons\Sword
 
-  11  ✔ is initializable
-  16  ✔ should be a weapon
-  21  ✔ has a damage number of 10
+   9  ✔ is initializable
+  14  ✔ should be a weapon
+  19  ✔ has a damage number of 10
+  24  ✔ does slashing damage
 
       Managers\CombatManager
 
@@ -69,9 +72,9 @@
 
       Player
 
-  19  ✔ is initializable
-  24  ✔ is a unit
-  29  ✔ should notify game when is has performed an action
+  17  ✔ is initializable
+  22  ✔ is a unit
+  27  ✔ should notify game when is has performed an action
 
       Races\Elf
 
@@ -137,27 +140,27 @@
 
       Units\Unit
 
-  41  ✔ is initializable
-  46  ✔ is killable
-  54  ✔ should have a level
-  59  ✔ can level up
-  65  ✔ can move
-  70  ✔ should have a race
-  75  ✔ should have a job
-  80  ✔ has a max health
-  85  ✔ has stats
-  94  ✔ has stats modified by race
- 103  ✔ has starting health equal to max health
- 108  ✔ its health cant exceed max health
- 114  ✔ its health cant drop below zero
- 120  ✔ should increase max health on level up
- 129  ✔ can take damage
- 135  ✔ has a damage number equal to its strength
- 140  ✔ cant attack when dead
- 146  ✔ can equip a wieldable in main hand
- 151  ✔ will delegate attacking to the game
+  40  ✔ is initializable
+  45  ✔ is killable
+  53  ✔ should have a level
+  58  ✔ can level up
+  64  ✔ can move
+  69  ✔ should have a race
+  74  ✔ should have a job
+  79  ✔ has a max health
+  84  ✔ has stats
+  93  ✔ has stats modified by race
+ 102  ✔ has starting health equal to max health
+ 107  ✔ its health cant exceed max health
+ 113  ✔ its health cant drop below zero
+ 119  ✔ should increase max health on level up
+ 128  ✔ can take damage
+ 134  ✔ has a damage number equal to its strength
+ 139  ✔ cant attack when dead
+ 145  ✔ can equip a wieldable in main hand
+ 150  ✔ will delegate attacking to the game
 
 
 22 specs
-92 examples (92 passed)
-823ms
+94 examples (93 passed, 1 pending)
+303ms
