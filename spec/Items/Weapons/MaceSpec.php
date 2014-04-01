@@ -1,6 +1,4 @@
-<?php
-
-namespace spec\Items\Weapons;
+<?php namespace spec\Items\Weapons;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;

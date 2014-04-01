@@ -1,6 +1,4 @@
-<?php
-
-namespace spec\Items\Weapons;
+<?php namespace spec\Items\Weapons;
 
 use Items\Weapons\Decorators\WeaponDecorator;
 use PhpSpec\ObjectBehavior;
@@ -21,6 +19,11 @@ class SwordSpec extends ObjectBehavior
     function it_has_a_damage_number_of_10()
     {
         $this->getDamage()->shouldEqual(10);
+    }
+
+    function it_does_slashing_damage()
+    {
+        $this->getDamageType()->shouldEqual(['slashing']);
     }
 
 }
