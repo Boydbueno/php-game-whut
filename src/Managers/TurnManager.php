@@ -1,6 +1,4 @@
-<?php
-
-namespace Managers;
+<?php namespace Managers;
 
 class TurnManager implements \SplSubject
 {

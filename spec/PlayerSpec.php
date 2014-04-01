@@ -1,6 +1,4 @@
-<?php
-
-namespace spec;
+<?php namespace spec;
 
 use Jobs\Job;
 use PhpSpec\ObjectBehavior;
