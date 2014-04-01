@@ -18,11 +18,6 @@ class SwordSpec extends ObjectBehavior
         $this->shouldBeAnInstanceOf('Items\Weapons\Weapon');
     }
 
-    function it_can_slash()
-    {
-    	$this->fire()->shouldEqual("Slashing with sword");
-    }
-
     function it_has_a_damage_number_of_10()
     {
         $this->getDamage()->shouldEqual(10);

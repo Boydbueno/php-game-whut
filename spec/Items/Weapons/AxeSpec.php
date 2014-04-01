@@ -17,11 +17,6 @@ class AxeSpec extends ObjectBehavior
         $this->shouldBeAnInstanceOf('Items\Weapons\Weapon');
     }
 
-    function it_can_chop()
-    {
-    	$this->fire()->shouldEqual('Chopping with axe');
-    }
-
     function it_has_a_damage_number_of_14()
     {
     	$this->getDamage()->shouldEqual(14);
