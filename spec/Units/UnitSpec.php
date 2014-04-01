@@ -6,7 +6,6 @@ use Items\Interfaces\Wieldable;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-use Managers\Interfaces\CombatManager;
 use Stats\Stats;
 use Units\Unit;
 use Races\Race;
