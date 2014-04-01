@@ -3,7 +3,6 @@
 namespace spec;
 
 use Jobs\Job;
-use Managers\CombatManager;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Races\Race;

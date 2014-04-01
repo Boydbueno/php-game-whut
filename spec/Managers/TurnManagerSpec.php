@@ -2,12 +2,10 @@
 
 namespace spec\Managers;
 
-use Managers\TurnManager;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use Interfaces\Actable;
-use Units\Unit;
 
 class TurnManagerSpec extends ObjectBehavior
 {
