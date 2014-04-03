@@ -25,7 +25,7 @@ class TurnManagerSpec extends ObjectBehavior
         $this->getObservers()->shouldHaveCount(1);
     }
 
-    function it_can_notify_its_observers_to_update(\SplObserver $actable1, \SplObserver $actable2)
+    function it_can_notify_its_observers_to_update(Actable $actable1, Actable $actable2)
     {
         $actable1->update($this)->shouldBeCalled();
         $actable2->update($this)->shouldBeCalled();
