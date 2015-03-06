@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\Stats\Intelligence</OriginalElement>
+  <nodes>
+    <node x="1675.25" y="1248.0">\Behaviors\AI\Interfaces\IAI</node>
+    <node x="292.0" y="1932.0">\Behaviors\Move\Walk</node>
+    <node x="643.5" y="1141.0">\Player</node>
+    <node x="285.0" y="1746.0">\Managers\TurnManager</node>
+    <node x="0.0" y="1746.0">\Game</node>
+    <node x="1112.0" y="1248.0">\Stats\Stat</node>
+    <node x="1456.0" y="1505.0">\Stats\Intelligence</node>
+    <node x="0.0" y="1932.0">\Behaviors\Move\MoveInterface</node>
+    <node x="172.33333333333331" y="1130.0">\Races\Orc</node>
+    <node x="533.0" y="1404.5">\Items\Weapons\Weapon</node>
+    <node x="153.0" y="1932.0">\Behaviors\Move\Fly</node>
+    <node x="378.0" y="1606.0">\Items\Weapons\Mace</node>
+    <node x="0.0" y="1617.0">\Items\Decorators\Flaming</node>
+    <node x="1723.0" y="1349.0">\Behaviors\AI\Aggressive</node>
+    <node x="1664.0" y="1746.0">\Moveable</node>
+    <node x="431.0" y="1932.0">\Exceptions\CantActWhenDeadException</node>
+    <node x="361.0" y="389.0">\Units\Unit</node>
+    <node x="799.0" y="1746.0">\Jobs\Job</node>
+    <node x="708.0" y="1617.0">\Items\Weapons\Sword</node>
+    <node x="84.25" y="0.0">\Stats\Stats</node>
+    <node x="316.91666666666663" y="1248.0">\Items\Interfaces\Wieldable</node>
+    <node x="1030.0" y="1505.0">\Stats\Stamina</node>
+    <node x="553.0" y="1617.0">\Items\Weapons\Axe</node>
+    <node x="1623.0" y="1349.0">\Behaviors\AI\Scared</node>
+    <node x="1232.0" y="1746.0">\Damage\DamageType\DamageType</node>
+    <node x="58.0" y="1371.0">\Items\Decorators\WeaponDecorator</node>
+    <node x="834.0625" y="155.0">\Interfaces\Actable</node>
+    <node x="1006.0" y="1746.0">\Damage\Container</node>
+    <node x="1172.0" y="1505.0">\Stats\Dexterity</node>
+    <node x="189.0" y="1617.0">\Items\Decorators\Holy</node>
+    <node x="30.333333333333314" y="1130.0">\Races\Elf</node>
+    <node x="1428.0" y="1746.0">\Managers\CombatManager</node>
+    <node x="0.0" y="598.0">\Races\Race</node>
+    <node x="1314.0" y="1505.0">\Stats\Strength</node>
+    <node x="888.0" y="1505.0">\Stats\Wisdom</node>
+    <node x="600.0625" y="111.0">\Killable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\Stats\Stamina" target="\Stats\Stat">
+      <point x="0.0" y="-36.5" />
+      <point x="1091.0" y="1485.0" />
+      <point x="1184.6" y="1485.0" />
+      <point x="-48.40000000000009" y="103.5" />
+    </edge>
+    <edge source="\Behaviors\AI\Aggressive" target="\Behaviors\AI\Interfaces\IAI">
+      <point x="0.0" y="-25.5" />
+      <point x="1767.5" y="1324.0" />
+      <point x="1735.25" y="1324.0" />
+      <point x="20.0" y="25.5" />
+    </edge>
+    <edge source="\Stats\Dexterity" target="\Stats\Stat">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="\Items\Weapons\Weapon" target="\Items\Interfaces\Wieldable">
+      <point x="0.0" y="-59.0" />
+      <point x="620.5" y="1346.0" />
+      <point x="425.66666666666663" y="1346.0" />
+      <point x="36.25" y="36.5" />
+    </edge>
+    <edge source="\Races\Race" target="\Stats\Stats">
+      <point x="0.0" y="-136.5" />
+      <point x="-86.25" y="169.5" />
+    </edge>
+    <edge source="\Stats\Strength" target="\Stats\Stat">
+      <point x="0.0" y="-36.5" />
+      <point x="1375.0" y="1485.0" />
+      <point x="1281.4" y="1485.0" />
+      <point x="48.40000000000009" y="103.5" />
+    </edge>
+    <edge source="\Items\Decorators\WeaponDecorator" target="\Items\Interfaces\Wieldable">
+      <point x="0.0" y="-92.5" />
+      <point x="179.0" y="1346.0" />
+      <point x="353.16666666666663" y="1346.0" />
+      <point x="-36.25" y="36.5" />
+    </edge>
+    <edge source="\Units\Unit" target="\Killable">
+      <point x="0.0" y="-345.5" />
+      <point x="703.5" y="364.0" />
+      <point x="707.0625" y="364.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="\Player" target="\Units\Unit">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="345.5" />
+    </edge>
+    <edge source="\Races\Elf" target="\Races\Race">
+      <point x="0.0" y="-36.5" />
+      <point x="91.33333333333331" y="1105.0" />
+      <point x="85.25" y="1105.0" />
+      <point x="-85.25" y="136.5" />
+    </edge>
+    <edge source="\Items\Weapons\Axe" target="\Items\Weapons\Weapon">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="\Items\Weapons\Mace" target="\Items\Weapons\Weapon">
+      <point x="0.0" y="-47.5" />
+      <point x="455.5" y="1581.0" />
+      <point x="562.1666666666666" y="1581.0" />
+      <point x="-58.33333333333337" y="59.0" />
+    </edge>
+    <edge source="\Stats\Intelligence" target="\Stats\Stat">
+      <point x="0.0" y="-36.5" />
+      <point x="1517.0" y="1475.0" />
+      <point x="1329.8" y="1475.0" />
+      <point x="96.79999999999995" y="103.5" />
+    </edge>
+    <edge source="\Items\Decorators\Holy" target="\Items\Decorators\WeaponDecorator">
+      <point x="0.0" y="-36.5" />
+      <point x="273.5" y="1581.0" />
+      <point x="239.5" y="1581.0" />
+      <point x="60.5" y="92.5" />
+    </edge>
+    <edge source="\Behaviors\AI\Scared" target="\Behaviors\AI\Interfaces\IAI">
+      <point x="0.0" y="-25.5" />
+      <point x="1663.0" y="1324.0" />
+      <point x="1695.25" y="1324.0" />
+      <point x="-20.0" y="25.5" />
+    </edge>
+    <edge source="\Stats\Wisdom" target="\Stats\Stat">
+      <point x="0.0" y="-36.5" />
+      <point x="949.0" y="1475.0" />
+      <point x="1136.2" y="1475.0" />
+      <point x="-96.79999999999995" y="103.5" />
+    </edge>
+    <edge source="\Units\Unit" target="\Stats\Stats">
+      <point x="-228.33333333333337" y="-345.5" />
+      <point x="475.16666666666663" y="364.0" />
+      <point x="343.0" y="364.0" />
+      <point x="86.25" y="169.5" />
+    </edge>
+    <edge source="\Units\Unit" target="\Interfaces\Actable">
+      <point x="228.33333333333337" y="-345.5" />
+      <point x="931.8333333333334" y="364.0" />
+      <point x="870.0625" y="364.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="\Races\Orc" target="\Races\Race">
+      <point x="0.0" y="-36.5" />
+      <point x="233.33333333333331" y="1105.0" />
+      <point x="255.75" y="1105.0" />
+      <point x="85.25" y="136.5" />
+    </edge>
+    <edge source="\Items\Decorators\Flaming" target="\Items\Decorators\WeaponDecorator">
+      <point x="0.0" y="-36.5" />
+      <point x="84.5" y="1581.0" />
+      <point x="118.5" y="1581.0" />
+      <point x="-60.5" y="92.5" />
+    </edge>
+    <edge source="\Items\Weapons\Sword" target="\Items\Weapons\Weapon">
+      <point x="0.0" y="-36.5" />
+      <point x="775.5" y="1581.0" />
+      <point x="678.8333333333334" y="1581.0" />
+      <point x="58.33333333333337" y="59.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5287069395906141" x="906.2521246458923" y="591.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constants</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
