@@ -2,6 +2,8 @@
 
 class Holy extends WeaponDecorator
 {
+
     protected $bonusDamage = 4;
     protected $damageType = ['holy'];
+
 }

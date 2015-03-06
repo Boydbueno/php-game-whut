@@ -2,7 +2,15 @@
 
 interface Wieldable
 {
+
+    /**
+     * @return integer
+     */
     function getDamage();
 
+    /**
+     * @return string
+     */
     function getDamageType();
+
 }

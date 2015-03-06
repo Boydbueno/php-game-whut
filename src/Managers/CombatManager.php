@@ -7,6 +7,10 @@ use Units\Unit;
 class CombatManager implements CombatManagerInterface
 {
 
+    /**
+     * @param Unit     $attacker
+     * @param Killable $target
+     */
     function attack(Unit $attacker, Killable $target)
     {
         $damage = $attacker->getDamage();

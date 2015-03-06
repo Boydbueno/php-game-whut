@@ -2,5 +2,7 @@
 
 interface IAI
 {
+
     function act();
+
 }

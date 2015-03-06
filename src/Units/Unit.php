@@ -13,6 +13,7 @@ use Game;
 
 class Unit implements StatsInterface, Killable, Actable
 {
+
     protected $health;
 
     protected $stats;
@@ -152,4 +153,5 @@ class Unit implements StatsInterface, Killable, Actable
     {
         // TODO: Implement
     }
+
 }

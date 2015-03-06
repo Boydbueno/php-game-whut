@@ -7,4 +7,5 @@ class Walk
     {
         return "Walking";
     }
+
 }

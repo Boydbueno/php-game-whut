@@ -2,5 +2,7 @@
 
 interface Moveable
 {
+
     function move();
+
 }
