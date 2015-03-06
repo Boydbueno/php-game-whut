@@ -7,6 +7,7 @@ abstract class WeaponDecorator implements Wieldable
 
     protected $wieldable;
     protected $bonusDamage;
+    protected $damageType;
 
     public function __construct(Wieldable $wieldable)
     {
@@ -20,11 +21,12 @@ abstract class WeaponDecorator implements Wieldable
 
     public function getDamageType()
     {
-        return $this->damageType;
+        return array_merge($this->damageType, $this->wieldable->getDamageType());
     }
 
     public function getBonusDamage()
     {
         return $this->bonusDamage;
     }
+
 }

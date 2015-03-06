@@ -19,15 +19,14 @@ class TurnManager implements \SplSubject
     {
         $index = array_search($observer, $this->observers);
 
-        if($index !== false)
-        {
+        if ($index !== false) {
             unset($this->observers[$index]);
         }
     }
 
     public function notify()
     {
-        foreach($this->observers as $observer) {
+        foreach ($this->observers as $observer) {
             $observer->update($this);
         }
     }

@@ -1,4 +1,4 @@
-<?php  namespace Stats;
+<?php namespace Stats;
 
 use Stats\Exceptions\ShouldBeIntException;
 

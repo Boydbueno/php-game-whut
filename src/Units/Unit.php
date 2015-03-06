@@ -68,8 +68,9 @@ class Unit implements StatsInterface, Killable, Actable
 
     public function attack(Killable $target)
     {
-        if ($this->isDead())
+        if ($this->isDead()) {
             throw new CantActWhenDeadException();
+        }
 
         $this->getGame()->attack($this, $target);
     }
@@ -121,11 +122,13 @@ class Unit implements StatsInterface, Killable, Actable
 
     public function setHealth($health)
     {
-        if ($health > $this->getMaxHealth())
+        if ($health > $this->getMaxHealth()) {
             $health = $this->getMaxHealth();
+        }
 
-        if ($health < 0)
+        if ($health < 0) {
             $health = 0;
+        }
 
         $this->health = $health;
     }

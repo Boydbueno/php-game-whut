@@ -1,4 +1,4 @@
-<?php  namespace Races;
+<?php namespace Races;
 
 use Stats\Stats;
 use Stats\Interfaces\Stats as StatsInterface;
