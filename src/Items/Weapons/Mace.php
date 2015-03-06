@@ -7,9 +7,4 @@ class Mace extends Weapon
     protected $damageTypes = ['blunt'];
     protected $statusEffects = ['stun'];
 
-    public function getStatusEffects()
-    {
-        return ['stun'];
-    }
-    
 }

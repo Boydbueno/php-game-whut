@@ -25,10 +25,4 @@ class MaceSpec extends ObjectBehavior
         $this->getDamageType()->shouldEqual(['blunt']);
     }
 
-    function it_can_stun()
-    {
-        // FIXME
-        // $this->getStatusEffects()->shouldEqual(['stun']);
-    }
-
 }

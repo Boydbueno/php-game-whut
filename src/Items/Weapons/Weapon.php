@@ -15,8 +15,6 @@ abstract class Weapon implements Wieldable
      */
     protected $damageTypes;
 
-    protected $statusEffects;
-
     /**
      * @return int
      */
@@ -31,11 +29,6 @@ abstract class Weapon implements Wieldable
     public function getDamageType()
     {
         return $this->damageTypes;
-    }
-
-    public function getStatusEffects()
-    {
-        return $this->statusEffects;
     }
 
 }
