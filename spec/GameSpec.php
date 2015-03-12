@@ -6,9 +6,9 @@ use Prophecy\Argument;
 
 class GameSpec extends ObjectBehavior
 {
-    function let(CombatManager $combatManager, \SplSubject $turnManager)
+    function let(\SplSubject $turnManager)
     {
-        $this->beConstructedWith($combatManager, $turnManager);
+        $this->beConstructedWith($turnManager);
     }
 
     function it_is_initializable()

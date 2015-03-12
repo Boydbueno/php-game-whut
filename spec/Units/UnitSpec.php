@@ -147,11 +147,4 @@ class UnitSpec extends ObjectBehavior
         $this->setMainHand($weapon);
     }
 
-    function it_will_delegate_attacking_to_the_game(Game $game, Unit $unit)
-    {
-        $game->attack($this, $unit)->shouldBeCalled();
-
-        // when
-        $this->attack($unit);
-    }
 }
