@@ -1,6 +1,5 @@
 <?php namespace spec;
 
-use Managers\Interfaces\CombatManager;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

@@ -7,7 +7,6 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use Stats\Stats;
-use Units\Unit;
 use Races\Race;
 use Jobs\Job;
 use Killable;
