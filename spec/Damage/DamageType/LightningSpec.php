@@ -5,11 +5,11 @@ namespace spec\Damage\DamageType;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class HolySpec extends ObjectBehavior
+class LightningSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Damage\DamageType\Holy');
+        $this->shouldHaveType('Damage\DamageType\Lightning');
     }
 
     function it_is_a_damage_type()

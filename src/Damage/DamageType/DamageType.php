@@ -6,7 +6,7 @@ abstract class DamageType
     /**
      * @var string
      */
-    protected $description;
+    protected $description = '';
 
     /**
      * @return string

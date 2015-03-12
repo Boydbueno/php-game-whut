@@ -14,7 +14,7 @@ class FlamingSpec extends ObjectBehavior
 
     function it_is_a_damage_type()
     {
-        $this->beAnInstanceOf('Damage\DamageType\DamageType');
+        $this->shouldImplement('Damage\DamageType\DamageType');
     }
 
     function it_has_a_description()

@@ -5,11 +5,11 @@ namespace spec\Damage\DamageType;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class HolySpec extends ObjectBehavior
+class SlashingSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Damage\DamageType\Holy');
+        $this->shouldHaveType('Damage\DamageType\Slashing');
     }
 
     function it_is_a_damage_type()
