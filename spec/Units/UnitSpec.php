@@ -135,6 +135,12 @@ class UnitSpec extends ObjectBehavior
         $this->getDamage()->shouldEqual(6);
     }
 
+    function it_can_die()
+    {
+        $this->takeDamage(9999);
+        $this->shouldBeDead();
+    }
+
     function it_cant_attack_when_dead(Killable $target)
     {
         $this->takeDamage(9999);

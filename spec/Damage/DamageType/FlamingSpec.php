@@ -19,6 +19,6 @@ class FlamingSpec extends ObjectBehavior
 
     function it_has_a_description()
     {
-        $this->getDescription()->shouldEqual('Burn, baby, burn!');
+        $this->getDescription()->shouldBeString();
     }
 }

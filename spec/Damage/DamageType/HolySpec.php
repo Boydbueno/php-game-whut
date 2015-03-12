@@ -19,6 +19,6 @@ class HolySpec extends ObjectBehavior
 
     function it_has_a_description()
     {
-        $this->getDescription()->shouldEqual('Tempus, guide me!');
+        $this->getDescription()->shouldBeString();
     }
 }
