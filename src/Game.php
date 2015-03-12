@@ -13,7 +13,7 @@ class Game
 
     /**
      * @param CombatManager $combatManager
-     * @param SplSubject    $turnManager
+     * @param SplSubject $turnManager
      */
     public function __construct(CombatManager $combatManager, TurnManager $turnManager)
     {
@@ -22,7 +22,7 @@ class Game
     }
 
     /**
-     * @param Actable  $unit
+     * @param Actable $unit
      * @param Killable $target
      */
     public function attack(Actable $unit, Killable $target)

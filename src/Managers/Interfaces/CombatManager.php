@@ -1,15 +1,15 @@
 <?php namespace Managers\Interfaces;
 
+use Interfaces\Actable;
 use Killable;
-use Units\Unit;
 
 interface CombatManager
 {
 
     /**
-     * @param Unit     $attacker
+     * @param Actable $attacker
      * @param Killable $target
      */
-    function attack(Unit $attacker, Killable $target);
+    function attack(Actable $attacker, Killable $target);
 
 }

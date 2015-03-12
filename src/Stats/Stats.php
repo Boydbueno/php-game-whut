@@ -65,5 +65,5 @@ class Stats
         }
         return $stats;
     }
-    
+
 }
