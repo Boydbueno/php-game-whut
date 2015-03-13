@@ -16,14 +16,17 @@ class AxeSpec extends ObjectBehavior
     {
         $axe = $this->create('hand axe');
         $axe->getType()->shouldEqual('axe');
+        $axe->getName()->shouldEqual('hand axe');
         $axe->getDamage()->shouldEqual(14);
 
-        $holyAxe = $this->create('battle axe');
-        $holyAxe->getType()->shouldEqual('axe');
-        $holyAxe->getDamage()->shouldEqual(17);
+        $axe = $this->create('battle axe');
+        $axe->getType()->shouldEqual('axe');
+        $axe->getName()->shouldEqual('battle axe');
+        $axe->getDamage()->shouldEqual(17);
 
-        $holyAxe = $this->create('golem axe');
-        $holyAxe->getType()->shouldEqual('axe');
-        $holyAxe->getDamage()->shouldEqual(21);
+        $axe = $this->create('golem axe');
+        $axe->getType()->shouldEqual('axe');
+        $axe->getName()->shouldEqual('golem axe');
+        $axe->getDamage()->shouldEqual(21);
     }
 }

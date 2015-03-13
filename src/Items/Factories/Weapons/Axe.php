@@ -13,6 +13,7 @@ class Axe extends WeaponFactory
 
         $weapon = new Weapon();
         $weapon->setType('axe');
+        $weapon->setName($type);
 
         switch($type) {
             case 'hand axe':
