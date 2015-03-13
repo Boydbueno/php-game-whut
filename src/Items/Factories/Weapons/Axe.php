@@ -1,26 +1,27 @@
 <?php
 
 namespace Items\Factories\Weapons;
-;
-use Items\Weapons\Weapon;
 
-class Axe
+use Items\Weapons\Weapon;
+use Items\Factories\Weapons\Weapon as WeaponFactory;
+
+class Axe extends WeaponFactory
 {
 
-    public function create($type)
+    protected function createWeapon($type)
     {
 
         $weapon = new Weapon();
         $weapon->setType('axe');
 
         switch($type) {
-            case 'normal':
+            case 'hand axe':
                 $weapon->setDamage(14);
             break;
-            case 'rare':
+            case 'battle axe':
                 $weapon->setDamage(17);
             break;
-            case 'epic':
+            case 'golem axe':
                 $weapon->setDamage(21);
             break;
 
@@ -28,4 +29,5 @@ class Axe
 
         return $weapon;
     }
+
 }
