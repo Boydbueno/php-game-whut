@@ -2,7 +2,9 @@
 
 namespace Damage;
 
-class Damage
+use ValueObject;
+
+class Damage implements ValueObject
 {
 
     private $damage = 0;
@@ -12,8 +14,19 @@ class Damage
         $this->damage = $number;
     }
 
-    public function getDamage()
+    function __toString()
+    {
+        return strval($this->damage);
+    }
+
+    function get()
     {
         return $this->damage;
     }
+
+    function isEqualTo(ValueObject $valueObject)
+    {
+        return $this->get() === $valueObject->get();
+    }
+
 }

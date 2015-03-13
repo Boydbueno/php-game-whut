@@ -1,7 +1,5 @@
 <?php namespace Stats;
 
-use Stats\Exceptions\ShouldBeIntException;
-
 abstract class Stat
 {
     protected $name;
