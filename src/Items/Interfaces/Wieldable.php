@@ -3,14 +3,13 @@
 interface Wieldable
 {
 
+    function getType();
+    function setType($type);
+
     /**
      * @return integer
      */
     function getDamage();
-
-    /**
-     * @return string
-     */
-    function getDamageType();
+    function setDamage($damage);
 
 }

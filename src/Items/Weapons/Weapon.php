@@ -2,18 +2,28 @@
 
 use Items\Interfaces\Wieldable;
 
-abstract class Weapon implements Wieldable
+class Weapon implements Wieldable
 {
+
+    /**
+     * @var string
+     */
+    protected $type;
 
     /**
      * @var integer
      */
     protected $damage;
 
-    /**
-     * @var string
-     */
-    protected $damageTypes;
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 
     /**
      * @return int
@@ -23,12 +33,9 @@ abstract class Weapon implements Wieldable
         return $this->damage;
     }
 
-    /**
-     * @return string
-     */
-    public function getDamageType()
+    public function setDamage($damage)
     {
-        return $this->damageTypes;
+        $this->damage = $damage;
     }
 
 }

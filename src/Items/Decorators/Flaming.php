@@ -4,6 +4,5 @@ class Flaming extends WeaponDecorator
 {
 
     protected $bonusDamage = 3;
-    protected $damageType = ['flaming'];
 
 }

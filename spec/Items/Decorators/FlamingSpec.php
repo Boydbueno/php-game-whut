@@ -14,7 +14,6 @@ class FlamingSpec extends ObjectBehavior
 	{
 		// Mock a weapon with 10 damage and slashing
 		$weapon->getDamage()->willReturn(10);
-		$weapon->getDamageType()->willReturn(['slashing']);
 
 		$this->beConstructedWith($weapon);
 	}
@@ -22,12 +21,6 @@ class FlamingSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->shouldHaveType('Items\Decorators\Flaming');
-    }
-
-    function it_should_add_flaming_to_the_weapon()
-    {
-        $this->getDamageType()->shouldHaveValue('flaming');
-        $this->getDamageType()->shouldHaveValue('slashing');
     }
 
     function it_should_increase_the_damage_of_the_weapon()
