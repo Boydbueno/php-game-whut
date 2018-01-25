@@ -1,8 +1,8 @@
 # PHP Game: Whut?!
-> A theoretical game written in PHP. Just part of the API is written and this is tested by unit tests written in (phpspec)[http://www.phpspec.net/en/stable/]. 
+> A theoretical game written in PHP. Just part of the API is written and this is tested by unit tests written in [phpspec](http://www.phpspec.net/en/stable/). 
 > This project was started to get a better understanding of unit testing, test driven development and design patterns
 
-Below are the contents of `spec/tests.txt`, display all the currently build tests and functionality:
+Below are the contents of `spec/tests.txt`, displaying all the currently build tests and functionality:
 ```
       Behaviors\AI\Aggressive
 
